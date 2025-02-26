@@ -9,15 +9,21 @@ public class Student {
     private Student() {
         this.seat = 0;
         this.name = "?";
+        this.onTime = 0;
+        this.late = 0;
+        this.excused = 0;
+        this.unexcused = 0;
     }
 
     public Student(int seat) throws java.lang.Exception {
         this();
+        this.setSeat(seat);
     }
 
     public Student(int seat, String name) throws java.lang.Exception{
         this();
-
+        this.setSeat(seat);
+        this.setName(name);
     }
 
     public int getSeat() {
@@ -55,12 +61,34 @@ public class Student {
         this.name = name;
     }
 
-    public void updateAttendance(int type) {
+    public void updateAttendance(int status) throws java.lang.Exception{
+        switch (status) {
+            case 1:
+                //onTime
+                this.onTime++;
+                break;
+            case 2:
+                //late
+                this.late++;
+                break;
 
+            case 3:
+                //excused
+                this.excused++;
+                break;
+
+            case 4:
+                //unexcused
+                this.unexcused++;
+                break;
+
+            default:
+                throw new java.lang.Exception("Invalid attendance type: " + status);
+        }
     }
 
     public void displayAttendance() {
-
+        System.out.println("OnTime=" + this.onTime + ", Late=" + this.late + ", Excused=" + this.excused + ", Unexcused=" + this.unexcused);
     }
 
     @Override
