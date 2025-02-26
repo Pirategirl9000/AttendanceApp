@@ -21,31 +21,38 @@ public class Student {
     }
 
     public int getSeat() {
-
+        return this.seat;
     }
 
     public int getOnTime() {
-
+        return this.onTime;
     }
 
     public int getLate() {
-
+        return this.late;
     }
 
     public int getExcused() {
-
+        return this.excused;
     }
 
     public int getUnexcused() {
-
+        return this.unexcused;
     }
 
-    public void setSeat(int seat) {
-
+    public void setSeat(int seat) throws Exception {
+        if (seat < 0) {
+            throw new Exception("Seat cannot be negative");
+        }
+        this.seat = seat;
     }
 
-    public void setName(String name) {
-
+    public void setName(String name) throws Exception{
+        name = name.trim();
+        if (name.isBlank()) {
+            throw new Exception("Student name cannot be blank");
+        }
+        this.name = name;
     }
 
     public void updateAttendance(int type) {
