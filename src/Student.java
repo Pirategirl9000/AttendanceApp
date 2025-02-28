@@ -20,7 +20,7 @@ public class Student {
         this.setSeat(seat);
     }
 
-    public Student(int seat, String name) throws java.lang.Exception{
+    public Student(int seat, String name) throws java.lang.Exception {
         this();
         this.setSeat(seat);
         this.setName(name);
@@ -53,7 +53,7 @@ public class Student {
         this.seat = seat;
     }
 
-    public void setName(String name) throws Exception{
+    public void setName(String name) throws Exception {
         name = name.trim();
         if (name.isBlank()) {
             throw new Exception("Student name cannot be blank");
@@ -93,13 +93,18 @@ public class Student {
 
     @Override
     public boolean equals(Object obj) {
+        if (!(obj instanceof Student))
+            return false;
 
+            Student other = (Student)obj;
+            return this.seat == other.getSeat();
     }
 
     @Override
     public String toString() {
-
+        return seat + " " + name;
     }
+
 
 
 
