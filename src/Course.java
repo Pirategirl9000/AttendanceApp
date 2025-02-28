@@ -23,4 +23,21 @@ public class Course {
 
         this.name = name;
     }
+
+    public Student getStudent(int seat) throws Exception {
+        int index = this.allStudents.indexOf(new Student(seat));
+
+        if (index == -1)
+            return null;
+        else
+            return this.allStudents.get(index);
+    }
+
+    public void addStudent(int seat, String name) throws Exception {
+        Student student = getStudent(seat);
+        if (student == null)
+            allStudents.add(new Student(seat, name));
+        else
+            throw new Exception("Seat " + seat + " is already taken by " + student.getName() + "!");
+    }
 }
