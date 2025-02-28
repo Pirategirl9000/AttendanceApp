@@ -99,6 +99,7 @@ public class Student {
         Student other = (Student)obj;
 
         return this.seat == other.getSeat();
+
     }
 
     @Override
