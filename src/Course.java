@@ -47,11 +47,8 @@ public class Course {
         int onTime = 0;
         int excused = 0;
         int unexcused = 0;
-        Student currentStudent;
 
-
-        for (int i = 0; i < this.allStudents.size(); i++) {
-            currentStudent = this.allStudents.get(i);
+        for (Student currentStudent : this.allStudents) {
             late += currentStudent.getLate();
             onTime += currentStudent.getOnTime();
             excused += currentStudent.getExcused();
@@ -59,6 +56,32 @@ public class Course {
         }
 
         System.out.println("OnTime=" + onTime + ", Late=" + late + ", Excused=" + excused + ", Unexcused=" + unexcused);
+    }
+
+    public void displayDetailReport() {
+        int totalLate = 0;
+        int totalOnTime = 0;
+        int totalExcused = 0;
+        int totalUnexcused = 0;
+
+        for (Student currentStudent : this.allStudents) {
+            totalLate += currentStudent.getLate();
+            totalOnTime += currentStudent.getOnTime();
+            totalExcused += currentStudent.getExcused();
+            totalUnexcused += currentStudent.getUnexcused();
+        }
+
+
+        // Total Header
+        System.out.println(this.name + ": " + "OnTime=" + totalOnTime + " Late=" + totalLate + " Excused=" + totalExcused + " Unexcused=" + totalUnexcused);
+
+        System.out.printf("%-4s %-15s %-6s %-4s %-7s %-9s\n", "Seat", "Name", "OnTime", "Late", "Excused", "Unexcused");
+        System.out.println("==== =============== ====== ==== ======= =========");
+
+        for (Student currentStudent : this.allStudents) {
+            System.out.printf("%-4d %-15s %-6d %-4d %-7d %-9d \n", currentStudent.getSeat(), currentStudent.getName(), currentStudent.getOnTime(), currentStudent.getLate(), currentStudent.getExcused(), currentStudent.getUnexcused());
+        }
+
     }
 
     @Override
