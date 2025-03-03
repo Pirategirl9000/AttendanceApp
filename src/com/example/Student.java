@@ -1,3 +1,5 @@
+package com.example;
+
 public class Student {
     private int seat;
     private String name;
@@ -60,7 +62,7 @@ public class Student {
     public void setName(String name) throws Exception {
         name = name.trim();
         if (name.isBlank()) {
-            throw new Exception("Student name cannot be blank");
+            throw new Exception("com.example.Student name cannot be blank");
         }
         this.name = name;
     }
