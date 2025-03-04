@@ -55,6 +55,8 @@ public class Student {
     public void setSeat(int seat) throws Exception {
         if (seat < 0) {
             throw new Exception("Seat cannot be negative");
+        } else if (seat == 0) {
+            throw new Exception("Seat cannot be zero"); // Need this for AttendanceApp.courseAttendance() function
         }
         this.seat = seat;
     }

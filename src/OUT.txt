@@ -1,0 +1,90 @@
+==================================================
+Welcome to the Attendance App
+==================================================
+Enter Section 1's Course Name: 9am
+Enter 9am Student Name or 'q' to quit: Bob
+Enter the Seat Number for Bob: 10
+Enter 9am Student Name or 'q' to quit: Sue
+Enter the Seat Number for Sue: 10
+Seat 10 is already taken by Bob!
+Unable to add student
+Enter 9am Student Name or 'q' to quit: Sue
+Enter the Seat Number for Sue: 11
+Enter 9am Student Name or 'q' to quit: q
+Enter Section 2's Course Name: 10am
+Enter 10am Student Name or 'q' to quit: Joe
+Enter the Seat Number for Joe: 1
+Enter 10am Student Name or 'q' to quit: Tom
+Enter the Seat Number for Tom: 2
+Enter 10am Student Name or 'q' to quit: q
+--------------------------------------------------
+Main Menu
+--------------------------------------------------
+0 = End Attendance App
+1 = Take 9:00 am Attendance
+2 = Take 10:00 am Attendance
+3 = Display Attendance Report
+--------------------------------------------------
+Menu Choice: 3
+9am: OnTime=0 Late=0 Excused=0 Unexcused=0
+Seat Name            OnTime Late Excused Unexcused
+==== =============== ====== ==== ======= =========
+10   Bob             0      0    0       0
+11   Sue             0      0    0       0
+10am: OnTime=0 Late=0 Excused=0 Unexcused=0
+Seat Name            OnTime Late Excused Unexcused
+==== =============== ====== ==== ======= =========
+1    Joe             0      0    0       0
+2    Tom             0      0    0       0
+--------------------------------------------------
+Main Menu
+--------------------------------------------------
+0 = End Attendance App
+1 = Take 9:00 am Attendance
+2 = Take 10:00 am Attendance
+3 = Display Attendance Report
+--------------------------------------------------
+Menu Choice: 1
+Enter 9am's Student seat or 0 to quit: 1
+Invalid seat, please try again!
+Enter 9am's Student seat or 0 to quit: 10
+--------------------------------------------------
+Enter #10 Bob Attendance:
+--------------------------------------------------
+1 = On Time
+2 = Late
+3 = Excused
+4 = Unexcused
+--------------------------------------------------
+Enter Status: 2
+Enter 9am's Student seat or 0 to quit: 0
+--------------------------------------------------
+Main Menu
+--------------------------------------------------
+0 = End Attendance App
+1 = Take 9:00 am Attendance
+2 = Take 10:00 am Attendance
+3 = Display Attendance Report
+--------------------------------------------------
+Menu Choice: 3
+9am: OnTime=0 Late=1 Excused=0 Unexcused=0
+Seat Name            OnTime Late Excused Unexcused
+==== =============== ====== ==== ======= =========
+10   Bob             0      1    0       0
+11   Sue             0      0    0       0
+10am: OnTime=0 Late=0 Excused=0 Unexcused=0
+Seat Name            OnTime Late Excused Unexcused
+==== =============== ====== ==== ======= =========
+1    Joe             0      0    0       0
+2    Tom             0      0    0       0
+--------------------------------------------------
+Main Menu
+--------------------------------------------------
+0 = End Attendance App
+1 = Take 9:00 am Attendance
+2 = Take 10:00 am Attendance
+3 = Display Attendance Report
+--------------------------------------------------
+Menu Choice: 0
+
+Process finished with exit code 0
